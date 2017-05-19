@@ -46,7 +46,8 @@
   (let [eids (init-db [{:db/id        "p1"
                         :project/name "GIC Index"
                         :project/id   "1660137"
-                        :project/type :tracker}
+                        :project/type :tracker
+                        :project.tracker/api-token "eccca23c47f1ed3e7de008bcd023d7b7"}
                        ])
         db (d/db (d/connect (:db-uri conf/configuration)))]
     (map #(d/pull db '[*] %) eids))

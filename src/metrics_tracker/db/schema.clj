@@ -32,6 +32,12 @@
     :db/doc "The last version of the project seen"
     }
 
+   {:db/ident :project.tracker/api-token
+    :db/valueType :db.type/string
+    :db/cardinality :db.cardinality/one
+    :db/doc "The api token (and hence user) used to access the API"
+    }
+
    ;; Iterations (Sprints)
 
    {:db/ident :iter/id
