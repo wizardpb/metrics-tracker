@@ -10,6 +10,7 @@
              [datomic.api :as d]
              [metrics-tracker.conf :as conf]
              [metrics-tracker.system :as system]
+             [metrics-tracker.adapters.tracker :as tr]
              [metrics-tracker.db.init :refer :all]))
 
 (def system nil)
