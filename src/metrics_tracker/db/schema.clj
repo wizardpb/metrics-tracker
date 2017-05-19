@@ -52,6 +52,12 @@
     :db/doc "The iteration state: :done, :in-progress"
     }
 
+   {:db/ident :iter/stories
+    :db/valueType :db.type/ref
+    :db/cardinality :db.cardinality/many
+    :db/doc "The stories of the iterations"
+    }
+
    {:db/ident :iter/start-date
     :db/valueType :db.type/instant
     :db/cardinality :db.cardinality/one
@@ -76,6 +82,18 @@
     :db/valueType :db.type/string
     :db/cardinality :db.cardinality/one
     :db/doc "The story state"
+    }
+
+   {:db/ident :story/estimate
+    :db/valueType :db.type/float
+    :db/cardinality :db.cardinality/one
+    :db/doc "The story estimate in story points"
+    }
+
+   {:db/ident :story/start-time
+    :db/valueType :db.type/instant
+    :db/cardinality :db.cardinality/one
+    :db/doc "The date the story was started"
     }
 
    {:db/ident :story/finished-time

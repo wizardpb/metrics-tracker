@@ -48,6 +48,16 @@
                         :project/id   "1660137"
                         :project/type :tracker
                         :project.tracker/api-token "eccca23c47f1ed3e7de008bcd023d7b7"}
+                       {:db/id        "p2"
+                        :project/name "Metaweb"
+                        :project/id   "156907"
+                        :project/type :tracker
+                        :project.tracker/api-token "eccca23c47f1ed3e7de008bcd023d7b7"}
+                       {:db/id        "p3"
+                        :project/name "PMS - Portfolio Management System"
+                        :project/id   "695031"
+                        :project/type :tracker
+                        :project.tracker/api-token "eccca23c47f1ed3e7de008bcd023d7b7"}
                        ])
         db (d/db (d/connect (:db-uri conf/configuration)))]
     (map #(d/pull db '[*] %) eids))
